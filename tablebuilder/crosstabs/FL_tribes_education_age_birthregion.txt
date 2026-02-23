@@ -1,0 +1,22 @@
+Source: ABS TableBuilder - 2021 Census - employment, income and education
+Table: AGE10P Age in Ten Year Groups and 1-digit level BPLP Country of Birth of Person by SA1 (UR) by TYPP Type of Educational Institution Attending
+Counting: Person Records
+
+This file was extracted from ABS TableBuilder using a custom geography that maps
+every SA1 in Australia to one of 49 FirstLight community segments (excluding Segment 49).
+The custom geography was uploaded as a CSV mapping SA1 codes to segment group names.
+
+Structure:
+- Series of matrices ("wafers"), each representing a combination of the wafer variable values
+- Within each wafer: rows are segments (01-48, 50), columns are the column variable categories
+- A "Total" row at the bottom of each wafer gives the national benchmark
+- Blank lines separate wafers
+
+The wafer heading (2 lines above each "SA1" marker) contains the values of the wafer
+variables for that block, separated by ",  " (comma + double space).
+
+Dataset-specific notes:
+- Person-level datasets use "SA1 (UR)" (usual residence)
+- Dwelling-level datasets use "SA1 (EN)" (enumeration)
+- Upload CSV field codes are dataset-specific — download an existing geography first to discover them
+- Do not open CSV in Excel (strips leading zeros from SA1 codes)
